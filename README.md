@@ -5,7 +5,7 @@ This project is a simple cloud-based web app that allows users to upload images 
 
 ---
 
-## 🚀 What the Project Does
+##  What the Project Does
 
 - Uploads images from the user.
 - Stores images securely in the cloud.
@@ -14,7 +14,7 @@ This project is a simple cloud-based web app that allows users to upload images 
 
 ---
 
-## ☁️ Cloud Services Used (4+)
+##  Cloud Services Used (4+)
 
 | Service Type       | Firebase Service         | Purpose                                |
 |--------------------|--------------------------|----------------------------------------|
@@ -25,7 +25,7 @@ This project is a simple cloud-based web app that allows users to upload images 
 
 ---
 
-## 🔗 How They Connect
+## How They Connect
 
 1. The frontend (HTML + JS) is hosted via **Firebase Hosting**.
 2. When an image is uploaded:
@@ -34,9 +34,9 @@ This project is a simple cloud-based web app that allows users to upload images 
 3. The app fetches the saved URLs from **Firestore** to display images.
 4. (Optional) A **Cloud Function** can be used to send an email when a new image is uploaded.
 
----
 
-## 🛠️ How to Run the Project
+
+##  How to Run the Project
 
 ### Requirements:
 - Node.js
@@ -46,7 +46,7 @@ This project is a simple cloud-based web app that allows users to upload images 
 
 ### Setup Steps:
 
-```bash
+bash
 # Clone the repo
 git clone https://github.com/swar071005/App-notification.git
 
