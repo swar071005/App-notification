@@ -1,3 +1,4 @@
+
 Linux Crash Course – Extended Student Handout
 1. Introduction to Linux and Filesystem
 - Linux is a multiuser, multitasking operating system used widely in servers and
