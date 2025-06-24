@@ -46,20 +46,8 @@ This project is a simple cloud-based web app that allows users to upload images 
 - Git
 - GitHub account
 
-### Setup Steps:
 
-bash
-# Clone the repo
-git clone https://github.com/swar071005/App-notification.git
 
-# Go into the project folder
-cd App-notification
-
-# Install Firebase CLI if not already
-npm install -g firebase-tools
-
-# Login to Firebase
-firebase login
 
 # Initialize Firebase (if not yet)
 firebase init
