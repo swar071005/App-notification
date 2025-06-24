@@ -1,1 +1,111 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DevOps Dashboard</title>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:sans-serif; background:#f4f7fa; color:#333; }
+    nav {
+      height:60px; background:#2f3e46; color:#fff;
+      display:flex; align-items:center; padding:0 20px;
+    }
+    aside {
+      position:fixed; top:60px; left:0; bottom:0;
+      width:200px; background:#354f52; padding:20px;
+    }
+    aside ul { list-style:none; }
+    aside ul li { margin:15px 0; }
+    aside ul li a { color:#fff; text-decoration:none; }
+    main {
+      margin-top:80px; margin-left:220px;
+      padding:20px;
+    }
+    .cards {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:20px; margin-bottom:30px;
+    }
+    .card {
+      background:#fff; padding:20px;
+      border-radius:8px;
+      box-shadow:0 2px 4px rgba(0,0,0,0.1);
+      text-align:center;
+    }
+    .card h3 { margin-bottom:10px; font-size:1.1em; }
+    .charts {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:20px; margin-bottom:30px;
+    }
+    .logs table {
+      width:100%; border-collapse:collapse;
+      background:#fff; border-radius:8px; overflow:hidden;
+    }
+    .logs th, .logs td {
+      padding:12px; text-align:left;
+      border-bottom:1px solid #e0e0e0;
+    }
+    .logs th { background:#eceff1; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>🚀 DevOps Dashboard</h1>
+  </nav>
+
+  <aside>
+    <ul>
+      <li><a href="#">Overview</a></li>
+      <li><a href="#">CI/CD</a></li>
+      <li><a href="#">Deployments</a></li>
+      <li><a href="#">Alerts</a></li>
+      <li><a href="#">Settings</a></li>
+    </ul>
+  </aside>
+
+  <main>
+    <!-- Metric Cards -->
+    <div class="cards">
+      <div class="card">
+        <h3>Build Status</h3>
+        <p id="build-status">✔️ Success</p>
+      </div>
+      <div class="card">
+        <h3>Open Incidents</h3>
+        <p id="incidents-count">2</p>
+      </div>
+      <div class="card">
+        <h3>Last Deploy</h3>
+        <p id="last-deploy">2025-06-20 14:35</p>
+      </div>
+      <div class="card">
+        <h3>Uptime</h3>
+        <p id="uptime">99.98%</p>
+      </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="charts">
+      <canvas id="throughputChart"></canvas>
+      <canvas id="errorRateChart"></canvas>
+    </div>
+
+    <!-- Recent Logs -->
+    <div class="logs">
+      <h2>Recent Deployments & Logs</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Timestamp</th>
+            <th>Service</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>2025-06-20 14:35</td
